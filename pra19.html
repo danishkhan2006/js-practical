@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #h1 {
+            background-color: burlywood;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: medium;
+            font-style: normal;
+            font-weight: bolder;
+            height: 550px;
+            width: 450px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 100px;
+            border: tomato;
+        }
+    </style>
+    <title>Registration form</title>
+</head>
+
+<body>
+    <form id="h1" onsubmit=" return valid()">
+        <h1>Login page</h1>
+        <label>username:</label>
+        <input type="text" size="20" id="username"><br><br>
+
+        <label>E-mail:</label>
+        <input type="text" size="20" id="E-mail"><br><br>
+
+        <label>password:</label>
+        <input type="password" size="20" id="password"><br><br><br>
+
+        <label>confirm password:</label>
+        <input type="password" size="20" id="confirm password"><br><br><br>
+        <input type="submit" size="30" id="submit" />
+        <input type="reset" size="30" id="reset" />
+    </form>
+    <script>
+        function valid() {
+            let user = document.getElementById('username').value;
+            let pass = document.getElementById('password').value;
+            let cmpass = document.getElementById('confirm password').value;
+            let eml = document.getElementById('E-mail').value;
+
+            if (user === "") {
+                alert("please enter the value");
+                return false;
+            }
+
+            if (pass === "") {
+                alert("please enter the value");
+                return false;
+            }
+
+            if (pass.length < 6 || pass.length > 10) {
+                alert("password Mustbe between 6 to 10");
+                return false;
+            }
+
+            if (pass != cmpass) {
+                alert("Please Enter same password");
+                return false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

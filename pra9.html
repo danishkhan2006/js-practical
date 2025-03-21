@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function swapFirstLast(str) {
+  return str.length > 2 ? str.slice(-1) + str.slice(1, -1) + str[0] : str;
+}
+
+console.log(swapFirstLast("hello")); 
+console.log(swapFirstLast("javascript")); 
+console.log(swapFirstLast("ab"));
+
+</script>    
+</body>
+</html>

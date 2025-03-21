@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dropdown Menu</title>
+</head>
+<body>
+    <label for="menu">Select an option:</label>
+
+    <select id="menu">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select>
+
+    <script>
+        let menu = document.getElementById("menu");
+
+        menu.addEventListener("change", function () {
+            alert("You selected: " + menu.value);
+        });
+    </script>
+
+</body>
+</html>

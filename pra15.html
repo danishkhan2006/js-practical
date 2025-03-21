@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Background on Hover</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightgray;
+            text-align: center;
+            line-height: 100px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">Hover over me</div>
+
+    <script>
+        let box = document.getElementById("box");
+
+        box.addEventListener("mouseenter", function () {
+            box.style.backgroundColor = "lightblue";
+        });
+
+        box.addEventListener("mouseleave", function () {
+            box.style.backgroundColor = "lightgray";
+        });
+    </script>
+
+</body>
+</html>

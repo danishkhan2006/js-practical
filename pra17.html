@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock"></div>
+    <script>
+        function settime() {
+            let now = new Date();
+            let timeString = now.toLocaleTimeString();
+            console.log(timeString); 
+            document.getElementById("clock").innerText = timeString;
+        }
+        setInterval(settime, 1000);
+        settime();
+    </script>
+</body>
+</html>
